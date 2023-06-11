@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+// classe responsavel por conter a palavra e as linhas onde a palavra ocorre no texto
+
 public class Word {
     public String word;
     public List lines;

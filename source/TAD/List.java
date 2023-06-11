@@ -18,6 +18,10 @@ public class List{
             extendSizeArray();
         }
 
+        if(size>0) 
+            if (this.array[size-1] == n)
+                return;
+
         this.array[size] = n;
         size++;
     }

@@ -3,12 +3,17 @@ import java.io.*;
 
 public class Main{
     public static void main(String args[]) throws IOException{
+        // Arquivo de entrada de dados (onde ficará o texto)
         File in = new File("./source/files/input.txt");
+        // Arquivo de saida de dados
         File out = new File("./source/files/output.txt");
+        // Arquivo de entrada de dados (onde ficara as palavras chaves)
         File keywords = new File("./source/files/keywords.txt");
 
+        //instancia objeto para fazer a leitura de arquivos
         BufferedReader br = new BufferedReader(new FileReader(keywords));
 
+        //reecria arquivo
         out.delete();
         out.createNewFile();
 
@@ -16,6 +21,7 @@ public class Main{
         Index index = new Index(26);
         String line;
 
+        //indexssando palavra chave
         while((line = br.readLine()) != null){
             String[] words = line.split("[,. ]+");
 
@@ -42,7 +48,7 @@ public class Main{
             ++i;
         }
         
-
+        //printa no arquivo out
         index.print(out);
     }
 }
